@@ -1,0 +1,21 @@
+﻿@using DTO;
+@model List<TaskDto>;
+
+
+<div class="container py-4">
+  <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+        @if (Model != null)
+        {
+            @foreach (TaskDto task in Model)
+            {
+                //llamara a nuestra vista parcial
+                @await Html.PartialAsync("_TaskCard", task);
+            }
+        }
+
+
+
+    <!-- Puedes duplicar este bloque para más tareas -->
+
+  </div>
+</div>

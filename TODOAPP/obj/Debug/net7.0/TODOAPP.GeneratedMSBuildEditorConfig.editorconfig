@@ -1,0 +1,49 @@
+is_global = true
+build_property.TargetFramework = net7.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = TODOAPP
+build_property.RootNamespace = TODOAPP
+build_property.ProjectDir = C:\Users\Ncore\OneDrive\Escritorio\PROJECTS C#\TODO APP\CODE\TODOAPP\TODOAPP\
+build_property.RazorLangVersion = 7.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\Ncore\OneDrive\Escritorio\PROJECTS C#\TODO APP\CODE\TODOAPP\TODOAPP
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/Ncore/OneDrive/Escritorio/PROJECTS C\#/TODO APP/CODE/TODOAPP/TODOAPP/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ncore/OneDrive/Escritorio/PROJECTS C\#/TODO APP/CODE/TODOAPP/TODOAPP/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ncore/OneDrive/Escritorio/PROJECTS C\#/TODO APP/CODE/TODOAPP/TODOAPP/Views/Task/Task.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGFza1xUYXNrLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ncore/OneDrive/Escritorio/PROJECTS C\#/TODO APP/CODE/TODOAPP/TODOAPP/Views/Task/TaskEdit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGFza1xUYXNrRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ncore/OneDrive/Escritorio/PROJECTS C\#/TODO APP/CODE/TODOAPP/TODOAPP/Views/Task/_TaskCard.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGFza1xfVGFza0NhcmQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ncore/OneDrive/Escritorio/PROJECTS C\#/TODO APP/CODE/TODOAPP/TODOAPP/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ncore/OneDrive/Escritorio/PROJECTS C\#/TODO APP/CODE/TODOAPP/TODOAPP/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Ncore/OneDrive/Escritorio/PROJECTS C\#/TODO APP/CODE/TODOAPP/TODOAPP/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-987hcuk1mq

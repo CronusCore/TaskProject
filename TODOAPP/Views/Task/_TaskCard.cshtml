@@ -1,0 +1,29 @@
+﻿@using DTO;
+@model TaskDto;
+<style>
+    .col:hover {
+    transform: translateY(-10px);
+}
+
+.col {
+    transition: 0.6s ease-in-out all;
+}
+</style>
+ <div class="col">
+    <div class="card shadow-sm border-0 h-100">
+        <div class="card-body d-flex flex-column">
+            <h5 class="card-title">@Model.TaskName</h5>
+            <p class="card-text text-muted mb-1"><small>Start: @Model.TaskInitDate.ToString("dd/MM/yyyy") </small></p>
+            <p class="card-text text-muted"><small>End:  @Model.TaskEndDate.ToString("dd/MM/yyyy") </small></p>
+            <p class="card-text flex-grow-1">@Model.TaskDescription</p>
+
+            <div class="d-flex justify-content-between align-items-center mt-auto">
+                <span class="badge" style="background-color:@Model.EstatusColorHexa">@Model.EstatusName</span>
+                <div>
+                    <a asp-action="Edit" asp-route-id="@Model.TaskId" class="btn btn-sm btn-outline-primary">Edit</a>
+                    <button class="btn btn-sm btn-outline-danger">Delete</button>
+                </div>
+            </div>
+        </div>
+    </div>
+ </div>
