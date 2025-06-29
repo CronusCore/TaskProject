@@ -1,15 +1,18 @@
-﻿@model TaskModel;
-
+﻿@using ViewModels;
+@model TaskViewModel;
+@{
+    bool isEdit = Model.TaskId > 0;
+    ViewData["title"] = isEdit ? "Edit Task" : "Create Task";
+}
 <div class="container mt-5">
     <div class="card shadow-sm">
         <div class="card-header bg-primary text-white">
-            <h5>Edit Task</h5>
+            <h5> @(isEdit ? "Edit Task" : "Create Task")</h5>
         </div>
         <div class="card-body">
-            <form asp-action="Edit" method="post">
+            <form asp-action="@(isEdit ? "Update" : "Create")" method="post">
                 @Html.AntiForgeryToken()
                 @Html.HiddenFor(m => m.TaskId)
-
                 <div class="mb-3">
                     <label asp-for="TaskName" class="form-label">Task Name</label>
                     <input asp-for="TaskName" class="form-control" />
@@ -19,12 +22,12 @@
                 <div class="row">
                     <div class="col-md-6 mb-3">
                         <label asp-for="TaskInitDate" class="form-label">Start Date</label>
-                        <input asp-for="TaskInitDate" type="datetime-local" class="form-control" />
+                        <input asp-for="TaskInitDate" type="date" class="form-control" />
                         <span asp-validation-for="TaskInitDate" class="text-danger"></span>
                     </div>
                     <div class="col-md-6 mb-3">
                         <label asp-for="TaskEndDate" class="form-label">End Date</label>
-                        <input asp-for="TaskEndDate" type="datetime-local" class="form-control" />
+                        <input asp-for="TaskEndDate" type="date" class="form-control" />
                         <span asp-validation-for="TaskEndDate" class="text-danger"></span>
                     </div>
                 </div>
@@ -43,14 +46,14 @@
 
                 <div class="mb-3">
                     <label asp-for="EstatusId" class="form-label">Status</label>
-                    <select asp-for="EstatusId" asp-items="ViewBag.EstatusList" class="form-select">
+                    <select asp-for="EstatusId" asp-items="@Model.Status" class="form-select">
                         <option value="">-- Select Status --</option>
                     </select>
                     <span asp-validation-for="EstatusId" class="text-danger"></span>
                 </div>
 
                 <div class="d-flex justify-content-end">
-                    <a asp-action="Index" class="btn btn-secondary me-2">Cancel</a>
+                    <a asp-action="task" class="btn btn-secondary me-2">Cancel</a>
                     <button type="submit" class="btn btn-primary">Save Changes</button>
                 </div>
             </form>

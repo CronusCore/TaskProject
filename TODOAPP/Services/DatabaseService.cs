@@ -62,7 +62,11 @@ namespace Services
                     }
                     else
                     {
-                        property.SetValue(item, Convert.ChangeType(reader.GetValue(propertyName), property.PropertyType));
+                        try 
+                        {
+                            property.SetValue(item, Convert.ChangeType(reader.GetValue(propertyName), property.PropertyType));
+                            
+                        }catch { property.SetValue(item, default); }
 
                     }
 
@@ -72,6 +76,36 @@ namespace Services
             }
 
             return result;
+        }
+
+        public async Task<T?> QueryScalar<T>(string storedProcedure, string connectionStringName , Dictionary<string, object> @params)
+        {
+            //implementar la lógica de DB
+            using SqlConnection connection = new SqlConnection(_connectionStrings[connectionStringName]);
+            using SqlCommand command = new SqlCommand(storedProcedure, connection);
+            command.CommandType = System.Data.CommandType.StoredProcedure;
+
+            if (@params != null)
+            {
+                foreach (var param in @params)
+                {
+                    command.Parameters.AddWithValue(param.Key, param.Value ?? DBNull.Value);
+                }
+            }
+
+            try
+            {
+
+                await connection.OpenAsync();
+                object? result = await command.ExecuteScalarAsync();
+
+                return (T)Convert.ChangeType(result, typeof(T));
+            }catch (Exception ex)
+            {
+                return default(T);
+            }
+
+            
         }
     }
 }

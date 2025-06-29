@@ -20,6 +20,8 @@ namespace TODOAPP
             //registramos el servicio que ocupara el o los controladores.
             builder.Services.AddScoped<IDatabaseService, DatabaseService>();
             builder.Services.AddScoped<ITaskService,TaskService>();
+            builder.Services.AddScoped<CatalogService>();
+
 
 
             var app = builder.Build();
